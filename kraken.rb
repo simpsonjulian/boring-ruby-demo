@@ -8,7 +8,7 @@ class Kraken
   end
 
   def validate(artifact,time)
-    raise "I need a real time object, c'mon" unless time.class == Time
+    raise "I need a real time object, c'mon" unless time.respond_to?(:utc)
     raise "Nice try, Robert Tables!" if  artifact.match(';')
   end
 
