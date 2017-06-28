@@ -3,3 +3,10 @@ rvm:
  - 2.2
  - jruby
  - rbx-2
+include:
+ - stage: test
+   script: ./test 1
+ - # stage name not required, will continue to use `test`
+   script: ./test 
+ - stage: deploy
+   script: ./deploy
